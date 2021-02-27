@@ -1,0 +1,49 @@
+#title {
+    color: rgb(48, 88, 163);
+    font-size: 36px;
+}
+
+#form {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 2%;
+    font-size: 20px;
+    color: rgb(119, 119, 119);
+}
+
+.input {
+    height: 30px;
+    margin-bottom: 3%;
+    border: 1px solid rgb(48, 88, 163);
+    border-radius: 5px;
+}
+
+#error {
+    color: rgb(170, 47, 47);
+}
+
+#greet {
+    font-size: 24px;
+    color: rgb(68, 143, 49);
+}
+
+#btn {
+    width: 150px;
+    padding: 1.5%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(48, 88, 163);
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.hint {
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+    ;
+}

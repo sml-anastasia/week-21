@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <h1 id="title">Регистрация</h1>
+        <form name="signUp" action="" id="form" novalidate>
+            <label for="name" class="label">Имя:</label>
+            <input type="text" id="name" class="input" placeholder="имя" required>
+
+            <label for="lastName" class="label">Фамилия:</label>
+            <input type="text" id="lastName" class="input" placeholder="фамилия" required>
+
+            <label for="mail" class="label">e-mail:</label>
+            <input type="email" id="mail" class="input" placeholder="почта"
+                pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i" required>
+            <p class="hint">пример: example@mail.com</p>
+
+            <label for="pass" class="label">Пароль:</label>
+            <input type="password" id="pass" class="input" minlength="8" placeholder="пароль"
+                pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$" required>
+            <p class="hint">пароль должен быть не менее 8 символов и содержать строчные и заглавные буквы, цифры и
+                специальные
+                знаки(! @ # $ *)</p>
+
+            <label for="pass2" class="label">Повторите пароль:</label>
+            <input type="password" id="pass2" class="input" placeholder="пароль" required>
+
+            <label for="sex" class="label">Пол:</label>
+            <select name="sex" id="sex" class="input" required>
+                <option value="no" disabled selected="selected">- не выбран -</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+
+            <label for="date" class="label">День рождения:</label>
+            <input type="date" id="date" class="input" placeholder="дата рождения" required>
+
+            <label for="county" class="label">Страна:</label>
+            <select name="country" id="country" class="input" required>
+                <option value="0" disabled selected="selected">- не выбрана -</option>
+                <option value="1">Россия</option>
+                <option value="2">Украина</option>
+                <option value="3">Беларусь</option>
+                <option value="4">Польша</option>
+                <option value="5">Венгрия</option>
+                <option value="6">Чехия</option>
+                <option value="7">США</option>
+                <option value="8">Великобритания</option>
+                <option value="9">Германия</option>
+                <option value="10">Франция</option>
+            </select>
+
+            <div id="error"></div>
+            <div id="greet"></div>
+            <button type="button" id="btn" onclick="checkAll();">Зарегистрироваться</button>
+        </form>
+    </section>
+
+    <script src="signUp.js">
+
+    </script>
+</body>
+
+</html>
