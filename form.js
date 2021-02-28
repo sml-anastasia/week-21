@@ -13,7 +13,7 @@ btn.onclick = function (event) {
         method: 'POST',
         body: JSON.stringify(user),
         headers: {
-            'Content-Type': 'application/jsonn;charset=utf-8'
+            'Content-Type': 'application/json;charset=utf-8'
         },
     })
     .then(response => response.json())
