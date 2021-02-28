@@ -5,25 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой питомец - кот</title>
-    <style>
-        input:required:valid {
-            border-color: green;
-        }
-
-        input:required:invalid {
-            border-color: red;
-        }
-
-        #chooseSex {
-            width: 200px;
-        }
-    </style>
 </head>
 
 <body>
     <h1>Пройдите наш опросник</h1>
     <h2>Расскажите о вашем домашнем любимце!</h2>
-    <form name="catForm" action="#" method="POST">
+    <form id="catForm" name="catForm">
 
         <label for="catName">1. Кличка вашего питомца:</label>
         <p><input type="text" name="catname" id="catName" placeholder="Кличка" autofocus required></p>
@@ -50,29 +37,26 @@
             <option value="nobreed">Дворовая</option>
         </select><br><br>
 
-        <fieldset id="feedType" style="width: 200px;">
-            <legend>4. Корм</legend>
-            <p>Чем питается ваш питомец?</p>
-            <input type="checkbox" name="feed" value="dry" checked="checked">сухой корм<br>
-            <input type="checkbox" name="feed" value="wet">влажный корм<br>
-            <input type="checkbox" name="feed" value="natural">натуральный корм<br>
-        </fieldset><br>
+        <legend>4. Корм</legend>
+        <p>Чем питается ваш питомец?</p>
+        <input type="checkbox" class="feed" name="feed" value="сухой корм" checked="checked">сухой корм<br>
+        <input type="checkbox" class="feed" name="feed" value="влажный корм">влажный корм<br>
+        <input type="checkbox" class="feed" name="feed" value="натуральный корм">натуральный корм<br><br>
 
-        <fieldset id="chooseSex">
-            <legend>5. Пол</legend>
-            <p>Пол питомца:</p>
-            <input type="radio" name="sex" value="male">самец<br>
-            <input type="radio" name="sex" value="female">самка<br>
-        </fieldset>
+        <legend>5. Пол</legend>
+        <p>Пол питомца:</p>
+        <input type="radio" class="sex" name="sex" value="кот">самец<br>
+        <input type="radio" class="sex" name="sex" value="кошка">самка<br>
 
         <p>6. Ваш комментарий:</p>
-        <textarea name="comments" rows="5" cols="30"></textarea><br>
+        <textarea id="comment" name="comments" rows="5" cols="30"></textarea><br>
 
         <p>7. Фото вашего питомца:</p>
         <p><input type="file" name="photo"></p>
 
         <p>Готово! Сохраните ваши ответы</p>
-        <p><input type="button" name="save" value="Сохранить"></p>
+        <button id="saveBtn">сохранить</button>
+        <script src="catform-formdata.js"></script>
     </form>
 </body>
 
